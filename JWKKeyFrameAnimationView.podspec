@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
 
   s.source_files     = 'JWKKeyFrameAnimationView/*.{h,m}'
  
-  s.ios.frameworks   =  'QuartzCore', 'Security'
+  s.ios.frameworks   =  'QuartzCore'
 
   s.requires_arc     =  true
 
