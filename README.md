@@ -2,7 +2,7 @@ JWKKeyFrameAnimationView
 ========================
 JWKKeyFrameAnimationView will allow you to create a view that displays a key-frame animation from a texture atlas. Currently, all frames must be of uniform size.
 
-This class will allow you to do animations that CATransforms will not. It works great for creating custom spinners.
+This class will allow you to do animations that CATransforms will not. It works great for creating custom spinners (UIActivityIndicator).
 
 ![Frame Animation Example](http://i.imgur.com/oJptCfv.gif)![Texture Atlas Example](http://i.imgur.com/8ayBGqH.png)
 
