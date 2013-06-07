@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name             =  'JWKKeyFrameAnimationView'
-  s.version          =  '0.1'
+  s.version          =  '1.0'
   s.summary          =  'A view for displaying key-frame animations.'
   s.homepage         =  'https://github.com/jwkelso/JWKKeyFrameAnimationView'
   s.author           =  { 'James Kelso' => 'james.w.kelso@gmail.com' }
-  s.source           =  { :git => 'https://github.com/jwkelso/JWKKeyFrameAnimationView.git', :commit => '1af57231b2137299241a5019e4489f005ec796ad' }
+  s.source           =  { :git => 'https://github.com/jwkelso/JWKKeyFrameAnimationView.git', :tag => '1.0' }
 
   s.source_files     = 'JWKKeyFrameAnimationView/*.{h,m}'
  
