@@ -11,6 +11,7 @@
 
 @implementation ViewController {
     JWKKeyFrameAnimationView *_frameAnimationView;
+    CGFloat maxAnimationDurationSecs;
 }
 
 - (void)viewDidLoad
@@ -18,8 +19,14 @@
     [super viewDidLoad];
     
     // Set up frame animation view
-    _frameAnimationView = [[JWKKeyFrameAnimationView alloc] initWithFrame:CGRectMake(110, 0, 100, 100) textureAtlas:[UIImage imageNamed:@"K_texture_atlas"] frameSize:CGSizeMake(100, 100) numberOfFrames:16];
-    _frameAnimationView.animationDuration = 5.0 * self.animationSlider.value;
+    UIImage *textureAtlas = [UIImage imageNamed:@"K_texture_atlas"];
+	CGFloat frameWidth = 100.0f;
+	CGFloat frameHeight = 100.0f;
+	maxAnimationDurationSecs = 5.0f;
+	NSInteger numberOfFrames = 16;
+    
+    _frameAnimationView = [[JWKKeyFrameAnimationView alloc] initWithFrame:CGRectMake(110, 0, frameWidth, frameHeight) textureAtlas:textureAtlas frameSize:CGSizeMake(frameWidth, frameHeight) numberOfFrames:numberOfFrames];
+    _frameAnimationView.animationDuration = maxAnimationDurationSecs * self.animationSlider.value;
     [self.view addSubview:_frameAnimationView];
     _frameAnimationView.animating = YES;
 }
@@ -29,6 +36,6 @@
 }
 
 - (IBAction)animationSliderValueChanged:(id)sender {
-    _frameAnimationView.animationDuration = 5.0 * self.animationSlider.value;
+    _frameAnimationView.animationDuration = maxAnimationDurationSecs * self.animationSlider.value;
 }
 @end
