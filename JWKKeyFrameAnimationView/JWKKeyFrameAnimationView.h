@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class JWKKeyFrameAnimationLayer;
+
 @interface JWKKeyFrameAnimationView : UIView {
     CGSize _frameSize;
     NSInteger _numberOfFrames;
@@ -16,6 +18,7 @@
 
 @property (nonatomic) BOOL animating;
 @property (nonatomic) CGFloat animationDuration;
+@property (readonly) JWKKeyFrameAnimationLayer *animationLayer;
 
 -(instancetype)initWithFrame:(CGRect)frame textureAtlas:(UIImage *)textureAtlas frameSize:(CGSize)frameSize numberOfFrames:(CGFloat)numberOfFrames;
 
