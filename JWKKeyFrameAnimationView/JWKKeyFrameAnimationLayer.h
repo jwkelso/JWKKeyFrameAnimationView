@@ -23,6 +23,7 @@
 @property (nonatomic) CGFloat animationDuration;
 @property (nonatomic) NSInteger frameIndex;
 @property (nonatomic) NSInteger numberOfFrames;
+@property (readonly) CABasicAnimation *animation;
 
 -(instancetype)initWithImage:(CGImageRef)img frameSize:(CGSize)size;
 -(void)startFrameAnimation;
