@@ -56,7 +56,7 @@
     // The speed should be the inverse of the duration.
     _animationDuration = animationDuration;
     if (_animating) {
-        self.speed = 1.0f / animationDuration;
+        self.speed = _animation.duration / animationDuration;
     }
 }
 
@@ -106,7 +106,7 @@
     }
     
     CFTimeInterval pausedTime = [self timeOffset];
-    self.speed = 1.0 / self.animationDuration;
+    self.speed = _animation.duration / self.animationDuration;
     self.timeOffset = 0.0;
     self.beginTime = 0.0;
     CFTimeInterval timeSincePause = [self convertTime:CACurrentMediaTime() fromLayer:nil] - pausedTime;
